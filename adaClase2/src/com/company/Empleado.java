@@ -14,10 +14,10 @@ public class Empleado {
     }
 
     public Integer calcularBono(){
-        if (cantidadDeFaltas >0){
-          return 100;
-        }else{
-            return 200;
+        switch (cantidadDeFaltas){
+            case 0: return 200;
+            case 1: return 100;
+            default: return 0;
         }
     }
 
